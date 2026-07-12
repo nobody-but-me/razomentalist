@@ -1,8 +1,20 @@
+/*
+still deciding if I'll use these fonts...
 
+@font-face {
+	font-family: 'MathJax_Typewriter';
+	src: url('https://raw.githubusercontent.com/nobody-but-me/gooffee/master/src/assets/fonts/MathJax_Typewriter-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
 body,html {
+/*	font-family: "MathJax_Typewriter", "DejaVu Sans Mono", "Times New Roman";*/
+	font-family: Georgia;
+	
 	background-color:#FFFDD0;
 	padding:         0;
-	margin:          5px;
+	margin:          0;
 	left:            0;
 	top:             0;
 	
