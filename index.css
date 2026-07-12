@@ -1,0 +1,44 @@
+
+body,html {
+	background-color:#FFFDD0;
+	padding:         0;
+	margin:          5px;
+	left:            0;
+	top:             0;
+	
+	background-color: black;
+	color: white;
+
+	overflow-x: hidden;
+}
+
+@keyframes texture_loop
+{
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100px 100px;
+	}
+}
+
+a:link{
+	color: #5886fc;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:visited{
+	color: #FFDB94;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:hover{
+	color: #395392;
+	background-color: transparent;
+	text-decoration: underline;
+}
+a:active{
+	color: #0D408E;
+	background-color: transparent;
+	text-decoration: underline;
+}
