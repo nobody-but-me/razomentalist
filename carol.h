@@ -38,6 +38,9 @@ void para(const char*_body, const char*_style);
 
 void list_item(const char*_body, const char*_style);
 
+void collapsible_list_item_begin(const char*_title, const char*_style);
+void collapsible_list_item_end();
+
 void ordered_list_begin(const char*_style);
 void ordered_list_end(void);
 
@@ -84,10 +87,26 @@ int carol_init(void);
 // globals
 page *g_current_page=NULL;
 
+static const char*get_file_extension(const char*_f);
 static int concat(char**_str,const char*_new_str);
 
 int add_media(const char*_filepath,const char*_filename)
 {
+	const char *prefix = "project/media/";
+	char *final_filename = strdup(prefix);
+	if ((concat(&final_filename, _filename)) == -1)
+	{
+		fprintf(stderr, "failed to allocate memory to final filename.\n");
+		free(final_filename);
+		return -1;
+	}
+	const char *file_ext = get_file_extension(final_filename);
+	if (access(final_filename, F_OK) == 0 && strcasecmp(file_ext, "css") != 0)
+	{
+		fprintf(stderr, "not copying %s: media already exists in the given path.\n", _filepath);
+		free(final_filename);
+		return 0;
+	}
     FILE*origin,*copy;
     char buffer[BUFFER_SIZE];
     size_t br;
@@ -97,35 +116,25 @@ int add_media(const char*_filepath,const char*_filename)
     {
         fprintf(stderr,"failed opening origin file.\n");
         return -1;
-    }
-    const char*prefix="project/media/";
-    char*final_filename = strdup(prefix);
-    if ((concat(&final_filename,_filename))==-1)
-    {
-	fprintf(stderr,"failed to allocate memory to final filename.\n");
-	free(final_filename);
-	return -1;
-    }
-    
-    printf("final copied filename: %s.\n",final_filename);
+    }    
+//    printf("final copied filename: %s.\n",final_filename);
     copy=fopen(final_filename,"wb");
     if(copy==NULL)
     {
         fprintf(stderr,"failed opening copy file.\n");
-	free(final_filename);
+		free(final_filename);
         return -1;
     }
-    
     printf("copying %s file to './project/media/%s'...\n",_filepath,_filename);
     while((br=fread(buffer,1,BUFFER_SIZE,origin))>0)
     {
         if(fwrite(buffer,1,br,copy)!=br)
         {
-	    fprintf(stderr,"failed writing to copy file.\n");
-	    free(final_filename);
-	    fclose(origin);
-	    fclose(copy);
-	    return -1;
+			fprintf(stderr,"failed writing to copy file.\n");
+			free(final_filename);
+			fclose(origin);
+			fclose(copy);
+			return -1;
         }
     }
     printf("%s copied successfully to %s.\n",_filepath,final_filename);
@@ -316,7 +325,8 @@ void link_image(const char*_link,const char*_path,const char*_alt,const char*_st
 	if (_style == NULL)
 	{
 		write_to_page("<a href='");
-		write_to_page(_link);
+		if (_link != NULL)
+			write_to_page(_link);
 		write_to_page("'><img src='");
 		write_to_page(final_path);
 		write_to_page("' alt='");
@@ -325,7 +335,8 @@ void link_image(const char*_link,const char*_path,const char*_alt,const char*_st
 	} else
 	{
 		write_to_page("<a href='");
-		write_to_page(_link);
+		if (_link != NULL)
+			write_to_page(_link);
 		write_to_page("' style='");
 		write_to_page(_style);
 		write_to_page("'><img src='");
@@ -354,6 +365,29 @@ void list_item(const char*_body, const char*_style)
 		write_to_page(_body);
 		write_to_page("</li>");
 	}
+	return;
+}
+
+void collapsible_list_item_begin(const char*_title, const char*_style)
+{
+	write_to_page(_style == NULL ? "<li style='overflow: hidden;'>": 
+					"<li style='overflow: hidden;"); write_to_page(_style);
+	if (_style != NULL)
+		write_to_page("'>");
+	write_to_page("<details>");
+	write_to_page("<summary style='cursor: pointer; font-weight: bold; display: flex;"
+				  "justify-content: space-between; align-items: center; user-select: none;"
+				  "--webkit-details-marker: none; list-style: none;'>");
+	write_to_page(_title);
+	write_to_page("</summary>");
+	write_to_page("<div style='padding-left: 30px;'>");
+	return;
+}
+void collapsible_list_item_end(void)
+{
+	write_to_page("</div>");
+	write_to_page("</details>");
+	write_to_page("</li>");
 	return;
 }
 
@@ -445,10 +479,10 @@ static int concat(char**_str,const char*_new_str)
 
 static const char*get_file_extension(const char*_filename)
 {
-    const char*dot=strrchr(_filename,'.');
-    if(!dot||dot==_filename)
-    return "";
-    return dot+1;
+	const char*dot=strrchr(_filename,'.');
+	if(!dot||dot==_filename)
+		return "";
+	return dot+1;
 }
 
 static const char*get_filetype(const char*_file_extension)
@@ -505,47 +539,47 @@ static void mount_style(page*_page)
     char*final_style=strdup(prefix);
     if (final_style==NULL)
     {
-	fprintf(stderr,"failed to strdup final_style.\n");
-	_page->output = NULL;
-	return;
+		fprintf(stderr,"failed to strdup final_style.\n");
+		_page->output = NULL;
+		return;
     }
     if ((concat(&final_style,_page->configuration->style_path))==-1)
     {
-	fprintf(stderr, "failed to concat final style buffer.\n");
-	_page->output = NULL;
-	free(final_style);
-	return;
+		fprintf(stderr, "failed to concat final style buffer.\n");
+		_page->output = NULL;
+		free(final_style);
+		return;
     }
     
     if (access(final_style, F_OK) == 0) // didn't want to do that but whatever
     {
-	printf("style file already exist.\n");
-	return;
+		printf("style file already exist.\n");
+		return;
     }
     
     if (_page->configuration->style_path != NULL)
     {
-	free(_page->configuration->style_path);
+		free(_page->configuration->style_path);
     }
     _page->configuration->style_path=strdup(final_style);
     if (_page->configuration->style_path==NULL)
     {
-	fprintf(stderr,"failed to strdup style_path");
-	_page->output = NULL;
-	free(final_style);
-	return;
+		fprintf(stderr,"failed to strdup style_path");
+		_page->output = NULL;
+		free(final_style);
+		return;
     }
     
     FILE*st=fopen(final_style,"a");
     if(st==NULL)
     {
-	fprintf(stderr,"failed to create or write to styles.css file.\n");
-	
-	free(_page->configuration->style_path);
-	free(final_style);
-	
-	_page->output=NULL;
-	return;
+		fprintf(stderr,"failed to create or write to styles.css file.\n");
+		
+		free(_page->configuration->style_path);
+		free(final_style);
+		
+		_page->output=NULL;
+		return;
     }
     fputs("\n",st);
     fputs("body,html {\n",st);
@@ -831,7 +865,8 @@ static int init_server(int*_server,int*_opt,struct sockaddr_in*_server_address)
         fprintf(stderr,"listening failed.\n");
         return -1;
     }
-    printf("listening  at http://localhost:%d.\n\n",DEFAULT_PORT);
+	printf("\n----------------------------------------------------\n");
+    printf("\nlistening  at http://localhost:%d.\n\n",DEFAULT_PORT);
     return 0;
 }
 
