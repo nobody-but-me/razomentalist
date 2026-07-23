@@ -79,8 +79,8 @@ void carol_compose(void)
 			chess_background();
 			div_begin("min-width: 75%; max-width: 75%; width: 75%; height: 100%; overflow-y: scroll; overflow-x: hidden;"
 					  "box-shadow: 3px 0px 15px 15px rgba(0,0,0,0.5); z-index: 5;");
-				page_banner("chakrasamvara_and_vajravarahi.png","neighbours banner", "credits: "
-							"<a href='https://www.metmuseum.org/art/collection/search/78190' target='blank'>Chakrasamvara and Vajravarahi</a>");
+				page_banner("train.jpg","neighbours banner", "credits: "
+							"omzqkn.jpg, by <a href='' target='blank'>Saint-Images</a>.");
 div_begin("padding-left: 25px; padding-right: 25px;");
 				div_begin(CENTER_SPACE_BETWEEN"width: 100%; border-bottom: 2px solid white;");
 					header("Journal", ""); header("·", NULL); header("Journal", "transform: scaleX(-1);");
@@ -735,6 +735,7 @@ int main(int argc,char**argv)
 	add_media("./media/chakrasamvara_and_vajravarahi.png", "chakrasamvara_and_vajravarahi.png");
 	add_media("./media/yearly_goals.png", "yearly_goals.png");
 	add_media("./media/books.jpg", "books.jpg");
+	add_media("./media/train.jpg", "train.jpg");
 	
 	add_media("./media/the_sailor.png", "the_sailor.png");
 	add_media("./media/chair.webp", "chair.webp");
