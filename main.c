@@ -1,4 +1,8 @@
 
+
+// você me fez em mito novamente? 
+
+
 #include <stdio.h>
 #define CAROL_IMPLEMENTATION
 #include "carol.h"
@@ -136,8 +140,62 @@ div_begin("padding-left: 25px; padding-right: 25px;");
 						"width: 100%; text-align: justify;");
 					div_end();
 				div_begin("width: 100%;");
-					unordered_list_begin(NULL);
-						collapsible_list_item_begin(" >&nbsp;&nbsp;&nbsp;&nbsp;[July, 20, 20226] I like butter.",
+					unordered_list_begin("border-top:");
+						collapsible_list_item_begin(" >&nbsp;&nbsp;&nbsp;&nbsp;[July, 22, 2026] I am not afraid of learning anything.",
+													"border-top: 2px solid white; padding-top: 15px; padding-bottom: 15px;");
+							para("I only recently realized that there are people who are afraid of learning. Lots of them have this misconception"
+								 " of 'there are things too hard or too complex to learn' -- and that's a very, very destructive"
+								 " idea.",
+							"width: 100%; text-align: justify;");
+							para("Learning is the endless process of acquiring knowledge about anything. That is: "
+								 "the life-long exercise of observating, "
+								 "analysing and understanding reality beyond or inside us. It is the beautiful "
+								 "act of becoming a child again and questioning \"where do these ants go to?\" or \"why "
+								 "do carrots get soft in boiling water, but eggs don't?\". Nothing more.",
+							"width: 100%; text-align: justify;");
+							para("For some reason at some point I am still trying to understand, many people started to"
+								 " believe that there are ideas or systems too complex to be learned, either because these"
+								 " ideas and systems are widely considered \"hard\", or because these people subjectively"
+								 " think these ideas and systems are too complex for them. Here I am going to briefly comment on two"
+								 " questions: 1) are there ideas and systems that are \"too hard\" for certain people? And"
+								 " 2) are there ideas and systems hard in essence?",
+							"width: 100%; text-align: justify;");
+							para("The first question falls pretty quickly: learning some system or idea is only hard for the "
+								 "student doing so if, and only if, the student in question do not have the necessary background "
+								 "knowledge required by that idea or system. It may sound arrogant, as if I mean \"students are "
+								 "stupid and that's why things are hard for them\". No. Every knowledge requires a certain pior "
+								 "knowledge: before riding a bike, you first had to learn how to walk on your own legs, thereby"
+								 " developing sufficient balance for the bike; before learning objects fall when dropped, you "
+								 "first had to watch them doing so. That's the whole process again and again: observation, analysing"
+								 " and understanding.",
+							"width: 100%; text-align: justify;");
+							para("In my vision, mostly of the systems and ideas that seem too complex to be learned just need these "
+								 "first steps, this background knowledge, this repertoire -- and that can be only acquired by "
+								 "observating and analysing and understanding other less-verbose ideas and systems; a problem I "
+								 "notice in people of my age -- including me here -- is that we often want to rush these first "
+								 "essencial steps to jump as soon as possible to the result; this is self-destructive and just leads"
+								 " to disappointment and dissatisfaction -- both with the oneself and with the subject in question."
+								 " Learning is like building a house: it needs the designing, the preparation, the foundation and "
+								 "framing, the rough-ins and the conclusions; if any step is skipped, the house will remain "
+								 "incomplete, unusable.",
+							"width: 100%; text-align: justify;");
+							para("With that said: yes, ideas and systems are difficult for certain students, but it lasts only until"
+								 " the student in question learns how to learn, acquiring, then, the necessary knowledge for that certain"
+								 " subject. If today I try to play the drum, it is going to be pretty hard for me, but that happens "
+								 "just because I have no prior experience with any percurssion musical instrument. What shouldn't "
+								 "happen, thus, is for me to be afraid to learn the drums because of that. The repertoire will be "
+								 "built with time and there are no reasons for me to believe I am uncapable of learning the drums;"
+								 " before me, many humans did learn how to play that instrument, why wouldn't I? Someone before me"
+								 " had the hard work not only to play the drums, but also the design them and make it \"playable\";"
+								 " someone before me worked on the theory, the music and the techniques for other people to play "
+								 "the drums, why wouldn't I be capable of wrapping my head around it? Thinking this way is "
+								 "spectacular because, all of that I have once feared to learn quickly become just subjects to acquire"
+								 " repertoire in, unexplored ideas and systems that I am not just going to try to understand, but will"
+								 "understand exactly what it is about -- not in it's entirety, but that parts I am the most "
+								 "the most interested in.",
+							"width: 100%; text-align: justify;");
+						collapsible_list_item_end();
+						collapsible_list_item_begin(" >&nbsp;&nbsp;&nbsp;&nbsp;[July, 20, 2026] I like butter.",
 													"border-top: 2px solid white; padding-top: 15px; padding-bottom: 15px;"
 													"border-bottom: 2px solid white;");
 							para("I like butter, always liked it. Perhaps the unique truth I can tell about myself is that"
@@ -199,6 +257,7 @@ div_begin("padding-left: 25px; padding-right: 25px;");
 						div_begin(CENTER_ROW"width: 100%;");
 							button("https://pirahxcx.neocities.org/", "pirahxcx.gif", "pirahxcx");
 							button("https://kassy.neocities.org/", "kassy.gif", "kassy");
+							button("https://saint-images.neocities.org/", "saint_images.png", "saint images");
 						div_end();
 						div_begin(CENTER_ROW"width: 100%;");
 							div_begin("margin: 5px;"); hyperlink("https://sob-o-sol.neocities.org/", "sob-o-sol", NULL); div_end();
@@ -648,6 +707,7 @@ int main(int argc,char**argv)
 	
 	add_media("./media/iwillneverbehappy.gif", "iwillneverbehappy.gif");
 	add_media("./media/irony_machine.gif", "irony_machine.gif");
+	add_media("./media/saint_images.png", "saint_images.png");
 	add_media("./media/projectc190.gif", "projectc190.gif");
 	add_media("./media/cyberstheb.gif", "cyberstheb.gif");
 	add_media("./media/marinados.png", "marinados.png");
