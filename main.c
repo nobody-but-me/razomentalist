@@ -141,58 +141,93 @@ div_begin("padding-left: 25px; padding-right: 25px;");
 					div_end();
 				div_begin("width: 100%;");
 					unordered_list_begin("border-top:");
-						collapsible_list_item_begin(" >&nbsp;&nbsp;&nbsp;&nbsp;[July, 22, 2026] I am not afraid of learning anything.",
+						collapsible_list_item_begin(" >&nbsp;&nbsp;&nbsp;&nbsp;[July, 23, 2026] I am not afraid of learning anything.",
 													"border-top: 2px solid white; padding-top: 15px; padding-bottom: 15px;");
-							para("I only recently realized that there are people who are afraid of learning. Lots of them have this misconception"
-								 " of 'there are things too hard or too complex to learn' -- and that's a very, very destructive"
-								 " idea.",
+							para("I only recently realized that there are people who are afraid of learning. Many of them have "
+								 "this misconception that there are things too hard to be learned' -- and that's a "
+								 "very, very destructive ideia.",
 							"width: 100%; text-align: justify;");
-							para("Learning is the endless process of acquiring knowledge about anything. That is: "
-								 "the life-long exercise of observating, "
-								 "analysing and understanding reality beyond or inside us. It is the beautiful "
-								 "act of becoming a child again and questioning \"where do these ants go to?\" or \"why "
+							para("Learning is the endless process of acquiring knowledge about anything. It is "
+								 "the life-long exercise of observing, "
+								 "analysing and understanding reality, whether beyond or within ourselves. It is the beautiful "
+								 "act of becoming a child again and asking, \"where do these ants go?\" or \"why "
 								 "do carrots get soft in boiling water, but eggs don't?\". Nothing more.",
 							"width: 100%; text-align: justify;");
-							para("For some reason at some point I am still trying to understand, many people started to"
-								 " believe that there are ideas or systems too complex to be learned, either because these"
-								 " ideas and systems are widely considered \"hard\", or because these people subjectively"
-								 " think these ideas and systems are too complex for them. Here I am going to briefly comment on two"
-								 " questions: 1) are there ideas and systems that are \"too hard\" for certain people? And"
-								 " 2) are there ideas and systems hard in essence?",
+							para("For some reason at some point I am still trying to understand, many people have come to"
+								 " believe that there are ideas or systems too hard to be learned, either because these"
+								 " ideas and systems are widely considered \"hard\" or because these people subjectively"
+								 " believe they are too difficult for them. Here I am going to briefly discuss two"
+								 " questions: 1) Are there ideas and systems that are \"too hard\" for certain people? And"
+								 " 2) Are there ideas and systems inherently difficult for humans?",
 							"width: 100%; text-align: justify;");
-							para("The first question falls pretty quickly: learning some system or idea is only hard for the "
-								 "student doing so if, and only if, the student in question do not have the necessary background "
-								 "knowledge required by that idea or system. It may sound arrogant, as if I mean \"students are "
-								 "stupid and that's why things are hard for them\". No. Every knowledge requires a certain pior "
-								 "knowledge: before riding a bike, you first had to learn how to walk on your own legs, thereby"
+							para("The first question falls pretty quickly: learning a system or idea will primarily be difficult for a "
+								 "student if they do not yet have the necessary background knowledge required "
+								 "to understand that idea or system. It may sound arrogant, as if I mean \"Students are "
+								 "stupid and that's why things are hard for them\", but not really. Every piece of knowledge requires a certain pior "
+								 "knowledge. Before riding a bike, you first had to learn how to walk on your own legs, thereby"
 								 " developing sufficient balance for the bike; before learning objects fall when dropped, you "
-								 "first had to watch them doing so. That's the whole process again and again: observation, analysing"
-								 " and understanding.",
+								 "first had to watch them doing so. That's the whole process, repeated over and over again: "
+								 "observation, analysing and understanding.",
 							"width: 100%; text-align: justify;");
-							para("In my vision, mostly of the systems and ideas that seem too complex to be learned just need these "
+							para("In my view, most of the systems and ideas that seem too difficult to be learned simply require these "
 								 "first steps, this background knowledge, this repertoire -- and that can be only acquired by "
-								 "observating and analysing and understanding other less-verbose ideas and systems; a problem I "
-								 "notice in people of my age -- including me here -- is that we often want to rush these first "
-								 "essencial steps to jump as soon as possible to the result; this is self-destructive and just leads"
-								 " to disappointment and dissatisfaction -- both with the oneself and with the subject in question."
-								 " Learning is like building a house: it needs the designing, the preparation, the foundation and "
-								 "framing, the rough-ins and the conclusions; if any step is skipped, the house will remain "
-								 "incomplete, unusable.",
+								 "observing, analysing and understanding other, less complex ideas and systems. A problem I "
+								 "notice among people of my age -- including myself -- is that we often want to rush through these "
+								 "essencial first steps so we can get as soon as possible to the result; this is self-destructive and just leads"
+								 " to disappointment and dissatisfaction -- both with ourselves and with the subject in question."
+								 " Learning is like building a house: it needs designing, preparation, foundation, "
+								 "framing, installing the rough-ins and finally completing the construction; if "
+								 "any step is skipped, the house will remain incomplete, unstable and unusable.",
 							"width: 100%; text-align: justify;");
-							para("With that said: yes, ideas and systems are difficult for certain students, but it lasts only until"
-								 " the student in question learns how to learn, acquiring, then, the necessary knowledge for that certain"
-								 " subject. If today I try to play the drum, it is going to be pretty hard for me, but that happens "
-								 "just because I have no prior experience with any percurssion musical instrument. What shouldn't "
-								 "happen, thus, is for me to be afraid to learn the drums because of that. The repertoire will be "
-								 "built with time and there are no reasons for me to believe I am uncapable of learning the drums;"
-								 " before me, many humans did learn how to play that instrument, why wouldn't I? Someone before me"
-								 " had the hard work not only to play the drums, but also the design them and make it \"playable\";"
-								 " someone before me worked on the theory, the music and the techniques for other people to play "
-								 "the drums, why wouldn't I be capable of wrapping my head around it? Thinking this way is "
-								 "spectacular because, all of that I have once feared to learn quickly become just subjects to acquire"
-								 " repertoire in, unexplored ideas and systems that I am not just going to try to understand, but will"
-								 "understand exactly what it is about -- not in it's entirety, but that parts I am the most "
-								 "the most interested in.",
+							para("With that said, yes, ideas and systems are difficult for certain students, but only until"
+								 " those students learn how to learn, acquiring, thereby, the knowledge necessary to approach that particular"
+								 " subject. If I tried to play the drums today, it would be quite difficult for me, but only because "
+								 "I have no prior experience with percurssion instruments. What should not "
+								 "happen, then, is for me to become afraid of learning the drums because of that. My repertoire will grow"
+								 " with time and there is no reason for me to believe I am incapable of learning to play the drums."
+								 " Before me, countless humans did learn to play that instrument -- why would I not? Before me"
+								 " someone not only learned to play the drums but also designed them and made them playable as they are today;"
+								 " someone before me developed the theory, the music and the techniques that allow others to play "
+								 "the drums, why would I not be capable of wrapping my head around them? Thinking this way is "
+								 "liberating because everything I once feared learning quickly becomes nothing but another subject in which to build "
+								 " repertoire -- another unexplored idea or system that I am not just merely going to try to understand, but will"
+								 " eventually understand, at least the parts that interest me the most in. Humans share broadly similar"
+								 " cognitive capacities, so there is no real good reason to believe that a subject mastered by "
+								 "millions others is inaccessible to me.",
+							"width: 100%; text-align: justify;");
+							para("What should be noted, though, is that different students learn in different ways; the overall structure"
+								 " of observing, analysing and understanding remains the same, but the individual processes involved can change"
+								 " significantly; as <a href='https://en.wikipedia.org/wiki/Rubem_Alves' target='_blank'>Rubem Alves</a> would say: \"you cannot include a "
+								 "student who has only one leg in a ten-kilometer race\". While some students learn better by reading"
+								 ", others may learn better by watching someone explain a concept or writing everything down. That is"
+								 " exactly why students should, before anything else, be taught to learn.",
+							"width: 100%; text-align: justify;");
+							para("As for the second question, I still do not have an answer. Here, I follow the main principle that,"
+								 " for an idea or system to be inherently hard for humans, it must be unnatural to us. For "
+								 "instance, walking on all fours is extremely difficult for us because it goes completely "
+								 "against our anatomy and biology -- thus, it is unnatural to us. By that reasoning, an idea or "
+								 "system is only inherently difficult if it goes against our nature -- and that was my starting "
+								 "point. The problem of it is that humans are psychobiosocial animals and it is such a hard task to"
+								 " define what is and what is not \"natural\" to us. Neither chess nor mathematics envolved in the savana with "
+								 " humans, yet humans not only learn them but also completely master them."
+								 " Additionally, thinking about \"natural\" aspects"
+								 " of humanity can easily lead to misconceptions and morally questionable conclusions if one "
+								 "projects one's own principles and ethics onto the subject -- for that reason, it must be "
+								 "approached carefully.",
+							"width: 100%; text-align: justify;");
+							para("I once had a programming professor who loved to write. He was great and, as two writing enthusiasts"
+								 ", we often talked about the act of writing. One day, during the break between classes, in the "
+								 "cafeteria, we both were drinking water and talking about fiction. At some point in the conversation"
+								 ", I asked him: \"if writing is so rewarding, why are people gradually stopping doing so, just as they "
+								 "are with reading?\" And he replied that both writing and reading are unnatural because they consume a great"
+								 " deal of energy. He argued that the human brain, like all things, constantly seeks a state of"
+								 " continuous rest, whereas reading and writing demand sustained mental effort and, therefore, run"
+								 " counter to this universal tendency. To this day, I still don't know if I completely agree with him.",
+							"width: 100%; text-align: justify; padding-bottom: 15px; border-bottom: 2px solid white;");
+							para("Perhaps I should have discussed, before all that, the difference between difficulty"
+								 " and complexity; that'll for sure be included in my TODO list. Futhermore, for you, reader"
+								 " who got interested in the topic, I would recommend you to read more about "
+								 "<a href='https://en.wikipedia.org/wiki/Epistemic_humility' target='blank'>epistemic humility</a>.",
 							"width: 100%; text-align: justify;");
 						collapsible_list_item_end();
 						collapsible_list_item_begin(" >&nbsp;&nbsp;&nbsp;&nbsp;[July, 20, 2026] I like butter.",
